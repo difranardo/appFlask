@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Tu Carrito</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Inicio</a>
+        </nav>
+    </header>
+    <main class="cart">
+        {% if cart_items %}
+            <ul>
+                {% for entry in cart_items %}
+                    <li>{{ entry.item.name }} x {{ entry.qty }} - ${{ entry.total }}</li>
+                {% endfor %}
+            </ul>
+            <p>Total: ${{ total }}</p>
+            <form action="{{ url_for('clear_cart') }}" method="post">
+                <button type="submit">Vaciar Carrito</button>
+            </form>
+        {% else %}
+            <p>El carrito está vacío.</p>
+        {% endif %}
+    </main>
+</body>
+</html>

@@ -1,2 +1,15 @@
 # appFlask
-Aplicacion full stack desarrollada en python y flask. Una tienda de ropa programada en un html basico, con una estructura responsive, y funcional.La cual se comunica con el back end a traves de flask, para hacer funcional el codigo de python con todos sus routes.
+
+Aplicación de ejemplo de una tienda de ropa desarrollada con Python y Flask. Incluye una plantilla HTML responsive que se comunica con el backend mediante diferentes rutas.
+
+## Uso
+
+1. Instalar dependencias:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Ejecutar la aplicación:
+   ```bash
+   python app.py
+   ```
+3. Abrir el navegador en `http://localhost:5000` para ver la tienda.
